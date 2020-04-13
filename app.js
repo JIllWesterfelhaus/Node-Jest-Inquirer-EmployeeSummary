@@ -16,7 +16,7 @@ function init () {
         {
             type: "input",
             message: "What is the employee's ID number?",
-            name: "idNum"
+            name: "id"
         },
         {
             type: "input",
