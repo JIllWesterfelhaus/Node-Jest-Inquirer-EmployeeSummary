@@ -2,7 +2,8 @@
 const inquirer = require("inquirer")
 function init () {
     inquirer.prompt ([
-        //this will be yes or no, continue if yes, console.log "Thank you" if no.
+        //this will be yes or no, continue if yes, console.log "Thank you" if no.  Should answers be 
+        //listed as y/n?  Boolean
         {
             type: "input",
             message: "Would you like to add a new employee to the roster?",
