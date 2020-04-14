@@ -9,7 +9,7 @@ function init () {
             name:  "newEmployee"
         },
         //fix syntax
-        if ("yes") {
+        if (response = "yes") {
             console.log ("Please answer the following questions.")
         }
             else {
