@@ -8,6 +8,14 @@ function init () {
             message: "Would you like to add a new employee to the roster?",
             name:  "newEmployee"
         },
+        //fix syntax
+        if ("yes") {
+            console.log ("Please answer the following questions.")
+        }
+            else {
+                console.log ("Thank you.")
+            }
+            //end program
         {
             type: "input",
             message: "What is the employee's name?",
@@ -25,6 +33,12 @@ function init () {
         },
 
         //if statement? ask if employee is manager, engineer or intern
+        
+        {
+            type: "input",
+            message:  "Is this employee a manager, engineer or intern?",
+            name: "role"
+        }
         //if manager
         {
             type: "input",
