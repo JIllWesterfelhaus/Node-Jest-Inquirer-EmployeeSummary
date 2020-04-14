@@ -18,14 +18,19 @@ function init () {
             message: "What is the employee's email?",
             name: "email"
         },
-
+        
         //if statement? ask if employee is manager, engineer or intern
+       // {
+       //     type: "confirm",
+       //     message: "Is the employee a manager?",
+        //    name: "confirmManager"
+       // }
         
         {
-            type: "input",
-            message:  "Is this employee a manager, engineer or intern?",
-            name: "role"
-        },
+              type: "input",
+              message:  "Is this employee a manager, engineer or intern?",
+              name: "role"
+     },
         //if manager
         {
             type: "input",
