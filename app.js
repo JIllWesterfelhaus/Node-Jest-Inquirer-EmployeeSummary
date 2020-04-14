@@ -2,24 +2,10 @@
 const inquirer = require("inquirer")
 function init () {
     inquirer.prompt ([
-        //this will be yes or no, continue if yes, console.log "Thank you" if no.  Should answers be 
-        //listed as y/n?  Boolean
+        
         {
             type: "input",
-            message: "Would you like to add a new employee to the roster?",
-            name:  "newEmployee"
-        },
-        //fix syntax
-        if (response = "yes") {
-            console.log ("Please answer the following questions.")
-        }
-            else {
-                console.log ("Thank you.")
-            }
-            //end program
-        {
-            type: "input",
-            message: "What is the employee's name?",
+            message: "Please begin here to register your new employee.  What is the new employee's name?",
             name: "name"
         },
         {
