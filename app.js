@@ -60,6 +60,7 @@ function init () {
         }
 
         //Ask if would like to add another employee, if yes, repeat, if no, say thank you.
+        //Y/N, boolean
 
     ])
     .then(function(response) {
