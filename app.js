@@ -25,7 +25,7 @@ function init () {
             type: "input",
             message:  "Is this employee a manager, engineer or intern?",
             name: "role"
-        }
+        },
         //if manager
         {
             type: "input",
