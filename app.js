@@ -1,5 +1,7 @@
 //set up inquirer//
 const inquirer = require("inquirer")
+const Manager = require("./lib/class")
+let team = []
 function init () {
     inquirer.prompt ([
         
@@ -27,37 +29,86 @@ function init () {
        // }
         
         {
-              type: "input",
+              type: "list",
               message:  "Is this employee a manager, engineer or intern?",
+              choices:  ["Manager", "Engineer", "Intern"],
               name: "role"
-     },
+     }
+    ])
+    .then(function(response) {
+        console.log(response)
+        if (response.role === "Manager") {
+            inquirer.prompt ([
+             {
+                type: "input",
+              message: "What is the manager's office number?",
+              name:  "officeNum"
+             }   
+            ]) 
+            .then(function(managerRes) {
+                let newManager = new Manager (response.name, response.id, managerRes.officeNum)
+             team.push(newManager)  
+             console.log (team)
+
+            }
+            
+            
+            )
+            }
+
+            if (response.role === "Engineer") {
+                inquirer.prompt ([
+                 {
+                    type: "input",
+                  message: "What is the engineer's GitHub username?",
+                  name:  "userName"
+                 }   
+                ])
+                }
+
+                if (response.role === "Intern") {
+                    inquirer.prompt ([
+                     {
+                        type: "input",
+                      message: "What school does the intern attend?",
+                      name:  "school"
+                     }   
+                    ])
+                    }
+
+
+
+
+
+
+    })
+
+
+
+
         //if manager
-        {
-            type: "input",
-            message:  "What is the manager's office number?",
-            name: "officeNum"
-        },
-        //if engineer
-        {
-            type: "input",
-            message:  "What is the engineer's GitHub user name?",
-            name: "gitHub"
-        },
-        //if intern
-        {
-            type: "input",
-            message: "What school does the intern attend?",
-            name: "school"
-        }
+        //{
+           // type: "input",
+           // message:  "What is the manager's office number?",
+        //     name: "officeNum"
+        // },
+        // //if engineer
+        // {
+        //     type: "input",
+        //     message:  "What is the engineer's GitHub user name?",
+        //     name: "gitHub"
+        // },
+        // //if intern
+        // {
+        //     type: "input",
+        //     message: "What school does the intern attend?",
+        //     name: "school"
+        // }
 
         //Ask if would like to add another employee, if yes, repeat, if no, say thank you.
         //Y/N, boolean
 
-    ])
-    .then(function(response) {
-        console.log(response)
-
-    })
+    
        
     
 
