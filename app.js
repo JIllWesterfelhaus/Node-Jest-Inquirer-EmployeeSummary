@@ -53,6 +53,13 @@ function init() {
                         name: "userName"
                     }
                 ])
+                .then(function (engineerRes) {
+                    let newEngineer = new Engineer(response.name, response.id, engineerRes.userName)
+                    team.push(newEngineer)
+                    console.log(team)
+
+                })
+
             }
 
             if (response.role === "Intern") {
@@ -63,6 +70,13 @@ function init() {
                         name: "school"
                     }
                 ])
+                .then(function (internRes) {
+                    let newIntern = new Intern(response.name, response.id, internRes.school)
+                    team.push(newIntern)
+                    console.log(team)
+
+                })  
+
             }
 
         })
