@@ -1,6 +1,8 @@
 //set up inquirer//
 const inquirer = require("inquirer")
-const Manager = require("./lib/class")
+const Manager = require("./lib/Manager")
+const Engineer = require("./lib/Engineer")
+const Intern = require("./lib/Intern")
 let team = []
 function init() {
     inquirer.prompt([
