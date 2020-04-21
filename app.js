@@ -1,8 +1,13 @@
 //set up inquirer//
+const render = require("./lib/htmlrenderer")
 const inquirer = require("inquirer")
 const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
+const path = require("path")
+const fs = require("fs")
+const output_dir = path.resolve(__dirname,"output")
+const output_path = path.join(output_dir,"team.html")
 let team = []
 function init() {
     inquirer.prompt([
@@ -83,9 +88,14 @@ function init() {
 
         })
 }
+const writeHTML = HTML => {
+    fs.writeFileSync (output_path, HTML, err => {
+        if (err) {
+            return console.log(err)
+        }
+    })
 
-
-
-
+}
+writeHTML(render(team))
 
 init();
