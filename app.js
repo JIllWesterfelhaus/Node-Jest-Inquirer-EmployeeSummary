@@ -45,7 +45,7 @@ function init() {
                     }
                 ])
                     .then(function (managerRes) {
-                        let newManager = new Manager(response.name, response.id, managerRes.officeNum)
+                        let newManager = new Manager(response.name, response.id, response.email, managerRes.officeNum)
                         team.push(newManager)
                         console.log(team)
 
@@ -61,7 +61,7 @@ function init() {
                     }
                 ])
                 .then(function (engineerRes) {
-                    let newEngineer = new Engineer(response.name, response.id, engineerRes.userName)
+                    let newEngineer = new Engineer(response.name, response.id, response.email, engineerRes.userName)
                     team.push(newEngineer)
                     console.log(team)
 
@@ -78,7 +78,7 @@ function init() {
                     }
                 ])
                 .then(function (internRes) {
-                    let newIntern = new Intern(response.name, response.id, internRes.school)
+                    let newIntern = new Intern(response.name, response.id, response.email, internRes.school)
                     team.push(newIntern)
                     console.log(team)
 
