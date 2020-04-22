@@ -42,11 +42,25 @@ function init() {
                         type: "input",
                         message: "What is the manager's office number?",
                         name: "officeNum"
-                    }
+                    },
+                    {
+                        type: "list",
+                        message: "Would you like to register another employee?",
+                        choices: ["Yes", "No"],
+                        name: "restart"
+                    },
                 ])
                     .then(function (managerRes) {
                         let newManager = new Manager(response.name, response.id, response.email, managerRes.officeNum)
                         team.push(newManager)
+                        if (managerRes.restart==="Yes") {
+                            init()
+                        } else {
+                            writeHTML(render(team))
+                        }
+
+            
+                        
                         console.log(team)
 
                     })
@@ -58,11 +72,24 @@ function init() {
                         type: "input",
                         message: "What is the engineer's GitHub username?",
                         name: "userName"
-                    }
+                    },
+                    {
+                        type: "list",
+                        message: "Would you like to register another employee?",
+                        choices: ["Yes", "No"],
+                        name: "restart"
+                    },
+
                 ])
                 .then(function (engineerRes) {
                     let newEngineer = new Engineer(response.name, response.id, response.email, engineerRes.userName)
                     team.push(newEngineer)
+                    if (engineerRes.restart==="Yes") {
+                        init()
+                    } else {
+                        writeHTML(render(team))
+                    }
+                     
                     console.log(team)
 
                 })
@@ -75,11 +102,24 @@ function init() {
                         type: "input",
                         message: "What school does the intern attend?",
                         name: "school"
-                    }
+                    },
+                    {
+                        type: "list",
+                        message: "Would you like to register another employee?",
+                        choices: ["Yes", "No"],
+                        name: "restart"
+                    },
+
                 ])
                 .then(function (internRes) {
                     let newIntern = new Intern(response.name, response.id, response.email, internRes.school)
                     team.push(newIntern)
+                    if (internRes.restart==="Yes") {
+                        init()
+                    } else {
+                        writeHTML(render(team))
+                    }
+                    
                     console.log(team)
 
                 })  
@@ -96,6 +136,6 @@ const writeHTML = HTML => {
     })
 
 }
-writeHTML(render(team))
+
 
 init();
