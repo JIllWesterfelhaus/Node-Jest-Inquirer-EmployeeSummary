@@ -10,6 +10,7 @@ const output_dir = path.resolve(__dirname,"output")
 const output_path = path.join(output_dir,"team.html")
 let team = []
 function init() {
+    //set up prompts
     inquirer.prompt([
 
         {
@@ -34,6 +35,7 @@ function init() {
             name: "role"
         }
     ])
+    //questions for each specific role
         .then(function (response) {
             console.log(response)
             if (response.role === "Manager") {
@@ -50,6 +52,7 @@ function init() {
                         name: "restart"
                     },
                 ])
+                
                     .then(function (managerRes) {
                         let newManager = new Manager(response.name, response.id, response.email, managerRes.officeNum)
                         team.push(newManager)
