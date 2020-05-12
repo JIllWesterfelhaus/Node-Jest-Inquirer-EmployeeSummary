@@ -18,6 +18,9 @@ This was built with node.js and Javascript.
 ## Build Status
 This is currently not complete.  The app generates a roster to an html page.  However, it currently does not pass all tests.
 
+## Demonstration Video
+Please see this link for a video demonstrating the generation of HTML:  https://youtu.be/JygOPosMV5o
+
 ## Credits
 I wish to thank my tutor, Daniel Masters.  I could not have done this without his patient assistance and support.
 
