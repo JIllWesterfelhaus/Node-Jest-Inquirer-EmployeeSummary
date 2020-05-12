@@ -22,7 +22,7 @@ This app is complete.
 Please see this link for video demonstrating the generation of HTML:  https://youtu.be/JygOPosMV5o
 Please see this link for video demostrating passing of tests:  https://youtu.be/rI3hfITU-b0
 
-![team roster](img.png)
+![team roster](assets/team%20roster.png)
 
 ## Credits
 I wish to thank my tutor, Daniel Masters.  I could not have done this without his patient assistance and support.
