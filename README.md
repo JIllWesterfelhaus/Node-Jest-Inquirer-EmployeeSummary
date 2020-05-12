@@ -13,13 +13,16 @@ This is an assignment for Northwestern university's Coding Bootcamp.
 This was built by Jill Westerfelhaus, with assistance from her tutor, Daniel Masters. 
 
 ## Tech Used
-This was built with node.js and Javascript.
+This was built with node.js, Jest, Inquirer and Javascript.
 
 ## Build Status
-This is currently not complete.  The app generates a roster to an html page.  However, it currently does not pass all tests.
+This app is complete.
 
-## Demonstration Video
-Please see this link for a video demonstrating the generation of HTML:  https://youtu.be/JygOPosMV5o
+## Demonstration Videos and Image
+Please see this link for video demonstrating the generation of HTML:  https://youtu.be/JygOPosMV5o
+Please see this link for video demostrating passing of tests:  https://youtu.be/rI3hfITU-b0
+
+![team roster] (img.png)
 
 ## Credits
 I wish to thank my tutor, Daniel Masters.  I could not have done this without his patient assistance and support.
