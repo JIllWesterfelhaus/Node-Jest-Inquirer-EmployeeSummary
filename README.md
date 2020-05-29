@@ -12,7 +12,11 @@ This is an assignment for Northwestern University's Coding Bootcamp.
 ## User Story
 
 AS A manager
+
+
 I WANT to generate a webpage that displays my team's basic info
+
+
 SO THAT I have quick access to emails and GitHub profiles
 
 
