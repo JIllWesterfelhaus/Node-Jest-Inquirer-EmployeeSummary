@@ -20,6 +20,7 @@ This app is complete.
 
 ## Demonstration Videos and Image
 Please see this link for video demonstrating the generation of HTML:  https://youtu.be/JygOPosMV5o
+
 Please see this link for video demostrating passing of tests:  https://youtu.be/rI3hfITU-b0
 
 Here is a screenshot of the roster:
